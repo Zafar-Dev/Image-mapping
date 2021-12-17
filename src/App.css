@@ -1,6 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .image {
-  width: 500px;
-  height: 400px;
+  width: 600px;
+  height: 450px;
   /* margin: auto; */
   /* position: relative */
 }
@@ -18,9 +33,112 @@
 
 .dot {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   /* padding: 10px 15px; */
-  background-color: blueviolet;
+  background-color: #ffffff75;
+  border: 2px solid #ffffff;
   border-radius: 50%;
+  box-shadow: 0px 0px 3px 1px rgb(255 255 255);
+}
+.order_list {
+  width: 500px;
+  /* background-color: #9d8989; */
+  padding: 12px 15px;
+}
+
+.order_list ul {
+  padding: 0;
+}
+
+.order_list ul li {
+  list-style: none;
+  padding: 8px 12px;
+  /* margin: 3px 0; */
+  width: 100%;
+  display: flex;
+  color: rgb(44, 44, 44);
+  /* background-color: blue; */
+  border-bottom: 1px solid rgb(70, 67, 67);
+}
+
+.order_list ul li:hover {
+  background-color: rgba(36, 44, 112, 0.13);;
+}
+
+.item_no {
+  margin-right: 12px;
+  width: 5%;
+}
+.product_name {
+  width: 80%;
+}
+.add_item {
+  width: 10%;
+  cursor: pointer;
+}
+
+.item_info {
+  /* margin-left: 8%; */
+  
+  padding: 12px 15px;
+}
+
+.product_input {
+  padding: 4px 12px;
+  outline: none;
+  color: #000;
+  width: 200px;
+  border: 1px solid rgb(62, 75, 197);;
+}
+
+.map_item {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.map_btn {
+  padding: 4px 18px;
+  background-color: rgb(62, 75, 197);
+  cursor: pointer;
+  color: #fff;
+}
+
+.map_btn:hover, .select_area_btn:hover, .add_area_btn:hover, .clear_area_btn:hover {
+  background-color: rgb(36, 44, 112);
+}
+
+.options {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+}
+
+.select_area_btn, .add_area_btn, .clear_area_btn, .submit {
+  padding: 4px 16px;
+  color: #fff;
+  border-radius: 2px;
+  background-color: rgb(62, 75, 197);
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+#file {
+  visibility: hidden;
+}
+label {
+  padding: 14px 14px;
+  color: #fff;
+  background-color: rgb(36, 104, 27);
+  align-self: flex-end;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.submit {
+  display: inline-block;
+  margin-left: 14px;
 }

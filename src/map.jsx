@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import image from './assests/pmv-chamara-MEsWk-dZzlI-unsplash.jpg'
 import {data} from './data'
 import OrderList from './orderlist'
@@ -22,6 +23,10 @@ const MapImage = ({items, setItems, file, setFile}) => {
     }, [items])
 
     useEffect(()=>{
+        setItems([])
+    },[])
+
+    useEffect(()=>{
         console.log("coords : " +selectedDotX, selectedDotY)
     }, [selectedDotX, selectedDotY])
 
@@ -40,7 +45,21 @@ const MapImage = ({items, setItems, file, setFile}) => {
         element.setAttribute("id", "some-id")
         element.style.left = `${x}px`
         element.style.top = `${y}px` 
-        element.style.transform = `translate(-${16}px, -15px)`
+        element.style.transform = `translate(-${16}px, 4px)`
+        element.classList.add("dot") 
+
+        
+        // element.innerText = "dot"       
+        imgRef.current?.appendChild(element)
+        // console.log(element)
+    }
+
+    const createOptions = (x,y) => {        
+        const element = document.createElement('div')
+        element.setAttribute("id", "some-id")
+        element.style.left = `${x}px`
+        element.style.top = `${y}px` 
+        element.style.transform = `translate(-${16}px, 4px)`
         element.classList.add("dot") 
         // element.innerText = "dot"       
         imgRef.current?.appendChild(element)
@@ -110,13 +129,13 @@ const MapImage = ({items, setItems, file, setFile}) => {
                         ))}
                     </ul>
                 </div>
-                <div className='submit'>Submit</div>
+                <Link to="/view" className='submit'>Submit</Link>
             </div>
-            <div className='options'>
+            {/* <div className='options'>
                 <div className='add_area_btn'>Add Area</div>
                 <div className='select_area_btn'>Select Area</div>                
                 <div className='clear_area_btn'>Clear Area</div>
-            </div>
+            </div> */}
         </div>
     )
 }

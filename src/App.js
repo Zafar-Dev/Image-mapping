@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import MapImage from './map';
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import ViewMap from './assests/viewMap';
 // import {data} from './data'
 function App() {
   // const getItem =(id) => {
@@ -22,9 +24,16 @@ function App() {
 
 
   return (
-    <div className="App">      
-      <MapImage items={items} setItems={setitems} file={file} setFile={setFile}/>
+    <Router>
+    <div className="App">
+        {/* <Nav /> */}
+      <Routes>
+      
+      <Route path="/" element={<MapImage items={items} setItems={setitems} file={file} setFile={setFile}/>}/>
+      <Route path="/view" element={<ViewMap items={items} setItems={setitems} file={file} setFile={setFile}/>}/>      
+      </Routes>
     </div>
+    </Router>
   );
 }
 

@@ -12,6 +12,9 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.container_view {
+
+}
 
 .image {
   width: 600px;
@@ -21,8 +24,8 @@ a {
 }
 .image_box {
   position: relative;
-  width: 500px;
-  height: 400px;
+  width: 600px;
+  height: 450px;
   /* margin: auto; */
 }
 
@@ -110,7 +113,7 @@ a {
 
 .options {
   width: 100%;
-  margin-top: 5%;
+  margin-top: 8%;
   display: flex;
 }
 
@@ -132,7 +135,7 @@ label {
   background-color: rgb(36, 104, 27);
   align-self: flex-end;
   position: absolute;
-  bottom: 0%;
+  bottom: 40%;
   left: 50%;
   border-radius: 2px;
   cursor: pointer;
@@ -141,4 +144,30 @@ label {
 .submit {
   display: inline-block;
   margin-left: 14px;
+}
+
+.home_page {
+  padding: 4px 16px;
+  color: #fff;
+  border-radius: 2px;
+  background-color: rgb(62, 75, 197);
+  cursor: pointer; 
+  position: relative;
+  left: 18%;
+  top: 30px;
+}
+
+
+.option_tab {  
+  position: absolute;
+  /* border: 1px solid #2e2e2e; */
+  /* padding: 4px; */
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.view_product_name, .view_product_price,.view_product_link {
+  border-bottom: 1px solid #d4d2d2;
+  padding: 6px;
+  font-size: 12px;
 }
